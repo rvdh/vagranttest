@@ -53,10 +53,7 @@
     }
   ],
   "post-processors": [
-    [{
-      "type": "vagrant",
-      "output": "test-dev.box"
-    },
+    [
     {
       "type": "atlas",
       "only": ["virtualbox-iso"],
