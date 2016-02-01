@@ -38,6 +38,8 @@
       "type": "virtualbox-iso",
       "vm_name": "dev01.test.nl",
       "vboxmanage": [
+        ["hostonlyif", "ipconfig", "vboxnet0","--ip", "192.168.10.250", "--netmask", "255.255.255.0"],
+        ["hostonlyif", "ipconfig", "vboxnet1","--ip", "192.168.15.250", "--netmask", "255.255.255.0"],
         ["modifyvm", "{{.Name}}", "--memory", "2048"],
         ["modifyvm", "{{.Name}}", "--cpus", "4"],
         ["modifyvm", "{{.Name}}", "--nic1", "nat"],
