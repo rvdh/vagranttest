@@ -93,10 +93,10 @@
         "--sudo",
         "-e base_selfsigned=true"
       ],
-      "playbook_file": "main.yml",
+      "playbook_file": "../main.yml",
       "inventory_groups": "all",
       "role_paths": [
-        "./roles/"
+        "../roles/"
       ]
     }
   ]
