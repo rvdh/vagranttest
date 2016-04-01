@@ -73,12 +73,12 @@
       "override": {
         "virtualbox-iso": {
           "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/ansible.sh",
-            "scripts/virtualbox.sh",
-            "scripts/cleanup.sh",
-            "scripts/minimize.sh"
+            "packer/scripts/base.sh",
+            "packer/scripts/vagrant.sh",
+            "packer/scripts/ansible.sh",
+            "packer/scripts/virtualbox.sh",
+            "packer/scripts/cleanup.sh",
+            "packer/scripts/minimize.sh"
           ]
         }
       }
@@ -93,10 +93,10 @@
         "--sudo",
         "-e base_selfsigned=true"
       ],
-      "playbook_file": "../main.yml",
+      "playbook_file": "main.yml",
       "inventory_groups": "all",
       "role_paths": [
-        "../roles/"
+        "./roles/"
       ]
     }
   ]
