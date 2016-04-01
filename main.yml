@@ -1,0 +1,6 @@
+---
+- hosts: all
+
+  roles:
+    - role: ansible-role-base
+      base_hostname: "{{ inventory_hostname }}"

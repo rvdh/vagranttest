@@ -82,6 +82,23 @@
           ]
         }
       }
+    },
+    {
+      "type": "shell-local",
+      "command": "ansible-galaxy install -f -r ../roles/requirements.yml -p ../roles/"
+    },
+    {
+      "type": "ansible-local",
+      "extra_arguments": [
+        "--sudo",
+        "-e base_selfsigned=true"
+      ],
+      "playbook_file": "../main.yml",
+      "playbook_dir": "../",
+      "inventory_groups": "all",
+      "role_paths": [
+        "../roles/"
+      ]
     }
   ]
 }

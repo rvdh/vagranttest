@@ -1,0 +1,2 @@
+- src: ssh://git@github.com/exonet/ansible-role-base.git
+  scm: git
